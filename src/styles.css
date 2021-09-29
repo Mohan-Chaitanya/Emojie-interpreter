@@ -2,3 +2,24 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+body {
+  background-color: antiquewhite;
+}
+
+span {
+  font-size: 2.5rem;
+}
+
+input {
+  border: 2px solid black;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+
+#output {
+  color: hsl(231, 73%, 55%);
+  font-family: "Courier New", Courier, monospace;
+}

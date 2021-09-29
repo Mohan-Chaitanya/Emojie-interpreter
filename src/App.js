@@ -6,7 +6,14 @@ var emojieObj = {
   "😘": "Face Blowing a Kiss",
   "😗": "Kissing Face",
   "🙂": "Smiling Face",
-  "😀": "Grinning Face"
+  "😀": "Grinning Face",
+  "🥺": "Pleading Face",
+  "😏": "Smirking Face",
+  "😒": "Unamused Face",
+  "🤤": "Drooling Face",
+  "🥵": "Hot Face",
+  "🥶": "Cold Face",
+  "😵": "Dizzy Face"
 };
 
 var ourEmojies = Object.keys(emojieObj);
@@ -16,6 +23,7 @@ export default function App() {
 
   function onChangeHandler(event) {
     var searchInput = event.target.value;
+    // console.log(searchInput);
     if (emojieObj[searchInput]) {
       setUserInput(emojieObj[searchInput]);
     } else {
@@ -32,7 +40,7 @@ export default function App() {
     <div className="App">
       <h1>ReactPractice</h1>
       <input onChange={onChangeHandler}></input>
-      <h4>{userInput}</h4>
+      <h4>Search for the emojie in the above search bar</h4>
       {ourEmojies.map(function (emojie) {
         return (
           <span onClick={() => clickHandler(emojie)} key={emojie}>
@@ -40,6 +48,7 @@ export default function App() {
           </span>
         );
       })}
+      <h3 id="output">{userInput}</h3>
     </div>
   );
 }
